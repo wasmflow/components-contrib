@@ -1,0 +1,34 @@
+{
+  "name": "",
+  "features": {
+    "stateful": false,
+    "streaming": false,
+    "version": 0
+  },
+  "version": "0.0.0",
+  "format": 1,
+  "wellknown": [],
+  "types": {},
+  "components": {
+    "json-parser": {
+      "name": "json-parser",
+      "inputs": {
+        "input": {
+          "type": "string"
+        }
+      },
+      "outputs": {
+        "output": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "config": {
+    "json-parser": {
+      "type": "struct",
+      "name": "Config",
+      "fields": {}
+    }
+  }
+}

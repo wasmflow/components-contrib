@@ -1,0 +1,52 @@
+{
+  "name": "",
+  "features": {
+    "stateful": false,
+    "streaming": false,
+    "version": 0
+  },
+  "version": "0.0.0",
+  "format": 1,
+  "wellknown": [],
+  "types": {},
+  "components": {
+    "toml-to-json": {
+      "name": "toml-to-json",
+      "inputs": {
+        "input": {
+          "type": "string"
+        }
+      },
+      "outputs": {
+        "output": {
+          "type": "string"
+        }
+      }
+    },
+    "yaml-to-json": {
+      "name": "yaml-to-json",
+      "inputs": {
+        "input": {
+          "type": "string"
+        }
+      },
+      "outputs": {
+        "output": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "config": {
+    "toml-to-json": {
+      "type": "struct",
+      "name": "Config",
+      "fields": {}
+    },
+    "yaml-to-json": {
+      "type": "struct",
+      "name": "Config",
+      "fields": {}
+    }
+  }
+}

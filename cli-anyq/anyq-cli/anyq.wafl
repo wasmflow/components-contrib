@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=https://wasmflow.com/schema.json
+---
+version: 1
+external:
+  anyqcli:
+    kind: Wasm
+    reference: ./build/anyq_cli.signed.wasm
+  jsonquery:
+    kind: Wasm
+    reference: /Users/shazaibn/Dev/components-contrib/json-query/query/build/query.signed.wasm
+  jsonparser:
+    kind: Wasm
+    reference: /Users/shazaibn/Dev/components-contrib/json/json-parser/build/query.signed.wasm
+  converter:
+    kind: Wasm
+    reference: /Users/shazaibn/Dev/components-contrib/markup-converter/converters/build/to_json.signed.wasm
+components:
+  json:
+    instances:
+      query: jsonquery::query
+      converter: jsonparser::json-parser
+    flow:
+      - <> -> converter.input
+      - converter.output -> query.input
+      - <> -> query.filter
+      - query.output -> <>
+  yaml:
+    instances:
+      query: jsonquery::query
+      converter: converter::yaml-to-json
+    flow:
+      - <> -> converter.input
+      - converter.output -> query.input
+      - <> -> query.filter
+      - query.output -> <>
+  toml:
+    instances:
+      query: jsonquery::query
+      converter: converter::toml-to-json
+    flow:
+      - <> -> converter.input
+      - converter.output -> query.input
+      - <> -> query.filter
+      - query.output -> <>

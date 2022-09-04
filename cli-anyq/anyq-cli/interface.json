@@ -1,0 +1,43 @@
+{
+  "name": "anyq-cli",
+  "features": {
+    "stateful": false,
+    "streaming": false,
+    "version": 0
+  },
+  "version": "0.0.0",
+  "format": 1,
+  "wellknown": [],
+  "types": {},
+  "components": {
+    "anyq-cli": {
+      "name": "anyq-cli",
+      "inputs": {
+        "argv": {
+          "type": "list",
+          "element": {
+            "type": "string"
+          }
+        },
+        "program": {
+          "type": "optional",
+          "option": {
+            "type": "link"
+          }
+        }
+      },
+      "outputs": {
+        "exit_code": {
+          "type": "u8"
+        }
+      }
+    }
+  },
+  "config": {
+    "anyq-cli": {
+      "type": "struct",
+      "name": "Config",
+      "fields": {}
+    }
+  }
+}

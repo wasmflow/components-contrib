@@ -1,0 +1,40 @@
+{
+  "name": "",
+  "features": {
+    "stateful": false,
+    "streaming": false,
+    "version": 0
+  },
+  "version": "0.0.0",
+  "format": 1,
+  "wellknown": [],
+  "types": {},
+  "components": {
+    "query": {
+      "name": "query",
+      "inputs": {
+        "input": {
+          "type": "string"
+        },
+        "filter": {
+          "type": "string"
+        }
+      },
+      "outputs": {
+        "output": {
+          "type": "list",
+          "element": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "config": {
+    "query": {
+      "type": "struct",
+      "name": "Config",
+      "fields": {}
+    }
+  }
+}
